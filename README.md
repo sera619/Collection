@@ -2,7 +2,7 @@
 
 Here you can find some serveral Python-Scripts/Binarys with some usefull function.
 
-> - StopWatch with GUI ([Download](https://github.com/sera619/Collection/releases/tag/v1.0.1))
+> - StopWatch with GUI ([Download](https://github.com/sera619/Collection/releases/tag/v1.0.1) actual version)
 >   - can shutdown your system after wait choosen seconds
 >   - ![](https://github.com/sera619/Python-Collection/blob/master/img/DigitalClock-Screenshot.png?raw=true)
 > - Draw logos from some superheros with Turtle ([Batman](https://github.com/sera619/Python-Collection/blob/master/Batman.py), [Spiderman](https://github.com/sera619/Python-Collection/blob/master/Spiderman.py), [Avangers](https://github.com/sera619/Python-Collection/blob/master/Avanger.py))
