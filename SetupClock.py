@@ -1,6 +1,7 @@
 import sys
 import os
 from cx_Freeze import setup, Executable
+from DigitalClock import version
 
 files = ['DigitalClock.py','digital-7.ttf', 'icon.ico']
 
@@ -10,7 +11,7 @@ target = Executable(script='DigitalClock.py',
 
 setup(
     name='DigitalClock',
-    version='1.0.1',
+    version=version,
     description="A small Stopwatch and clock for Microsoft Windows 10/11.",
     author="S3R43o3",
     copyright="S3R43o3",
