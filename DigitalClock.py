@@ -9,14 +9,7 @@ import sys
 import pyglet
 import os
 
-version = "1.1.2"
-
-
-
-
-pyglet.font.add_file('digital-7.ttf')
-count = 0
-
+ 
 class StopWatch():
     def reset(self):
         global count
@@ -46,11 +39,11 @@ class StopWatch():
                 s+=1
             elif(s==59):
                 s=0
-                if(m<59):
-                    m+=1
-                elif(m==59):
-                    m=0
-                    h+=1
+            if(m<59):
+                m+=1
+            elif(m==59):
+                m=0
+                h+=1
             if(h<10):
                 h = str(0)+str(h)
             else:
@@ -130,11 +123,11 @@ class StopWatch():
         self.main.title("Digitial Clock with Python")
         self.main.iconbitmap(default='icon.ico')
 
+        self.mainLabel = Label(self.main, font= ('digital-7', 40), background='black', foreground='red', text='Python Watch')
         self.savedtime_label = Label(self.main, font=('digital-7', 14), background='black', foreground='gold', text="-Your saved time-")
-        self.label_savedtime= Label(self.main, font=('digital-7',20), background='black', foreground='orange', textvariable=self.saved_time) 
+        self.label_savedtime= Label(self.main, font=('digital-7',20), background='black', foreground='cyan', textvariable=self.saved_time) 
         self.label_stopwatch =Label(self.main, font=('digital-7',14), background='black', foreground='gold', text="-Stopwatch-")
         self.label_time =Label(self.main, font=('digital-7',14), background='black', foreground='gold', text="-Current Time-")
-        self.mainLabel = Label(self.main, font= ('digital-7', 40), background='black', foreground='cyan', text='Python Watch')
         self.clock_label= Label(self.main, font = ('digital-7', 20), background = 'black', foreground = 'cyan')
         self.timer_label = Label(self.main, textvariable=self.t,font=('digital-7', 20), background = 'black', foreground='cyan')
         self.brand_label = Label(self.main, text=f'Stopwatch Version {version} | by S3R43o3', font=('digital-7', 9), background='black', foreground='cyan')
@@ -148,7 +141,7 @@ class StopWatch():
         self.reset_button = Button(self.main, text = "Timer Reset", width=10, padding=2, command= self.reset)
         self.reset_savedtime_button = Button(self.main, text="Reset Save", width=10, padding=2, command=self.reset_savedTime)
         self.shutdown_button =Button(self.main, text="Shutdown System", width=18, padding=2, command=self.open_shutdown_messagebox)
-        self.shutdown_label = Label(self.main, text="-Shutdown Time-", font=("digital-7",14),background='black', foreground='gold')
+        self.shutdown_label = Label(self.main, text="-Shutdown Timer-", font=("digital-7",14),background='black', foreground='gold')
         self.shutdown_timelabel = Label(self.main, text="Enter seconds to wait before shutdown.", font=('digital-7',12), background='black', foreground='green')
         self.cancel_shutdown_button = Button(self.main, text="Cancel Shutdown",width=18, padding=2, command=self.cancel_shutdown)
 
@@ -176,6 +169,11 @@ class StopWatch():
         self.main.mainloop()
 
 
-if __name__=='__main__':
+
+
+if __name__=='__main__':    
+    count = 0
+    version = "1.1.2"
+    pyglet.font.add_file('digital-7.ttf')
     stopwatch = StopWatch()
         
