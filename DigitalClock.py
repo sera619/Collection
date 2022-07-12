@@ -8,7 +8,7 @@ import sys
 import pyglet
 import os
 
-version = "1.1.5"
+version = "1.2.5"
  
 class StopWatch():
     def reset(self):
