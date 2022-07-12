@@ -1,5 +1,4 @@
 from distutils.command.config import config
-from logging import shutdown
 from tkinter import *
 from tkinter import messagebox
 from tkinter.ttk import *
@@ -9,6 +8,7 @@ import sys
 import pyglet
 import os
 
+version = "1.1.5"
  
 class StopWatch():
     def reset(self):
@@ -173,7 +173,6 @@ class StopWatch():
 
 if __name__=='__main__':    
     count = 0
-    version = "1.1.2"
     pyglet.font.add_file('digital-7.ttf')
     stopwatch = StopWatch()
         
